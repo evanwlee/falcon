@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
+	<title>Millennium Falcon - YT-1300 492727ZED - Corellian YT-1300f light freighter</title>
+	<link rel="shortcut icon" type="image/png" href="/falcon/image/favicon.png">
+	<script src="/js/libs/jquery-3.3.1.min.js"></script>
+	<script src="/falcon/js/falcon.js?b=1332"></script>
+	<style>
+		.button-on {
+			background-color: red;
+		}
+
+		.button-off {
+			background-color: #d8382c;
+		}
+
+		.button-clicked {
+			border: none;
+			text-align: center;
+			text-decoration: none;
+			box-shadow: inset -3px -5px 12px 2px white;
+			opacity: 1 !important;
+		}
+
+		.light-button {
+			border-radius: 50%;
+			border: none;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			opacity: 0.5;
+		}
+
+		th,
+		td {
+			color: white;
+		}
+	</style>
+</head>
+
+<body style="background-color: black;">
+	<img id="console" src="/falcon/image/ALL_OFF.png" width="720" height="361" alt="cockpit" usemap="cockpit" style="border-radius: 8px;">
+	<map name="cockpit">
+		<area id="RU" class="location" alt="RU" title="Walkway Floor" href="#" shape="poly" coords="434,14,539,14,540,59,435,59"
+		 data-light-id="1" data-state="off" data-pos="RU" />
+		<area id="LU" class="location" alt="LU" title="Cockpit Console" href="#" shape="poly" coords="206,17,316,17,317,57,209,55"
+		 data-light-id="2" data-state="off" data-pos="LU" />
+		<area id="C" class="location" alt="C" title="Gun Port" href="#" shape="poly" coords="313,127,314,173,345,174,347,128"
+		 data-light-id="3" data-state="off" data-pos="C" />
+		<area id="PANEL" class="toggle-panel" title="Control Panel" coords="375,253,403,230" shape="rect">
+		<area alt="" title="OPEN RECT" coords="525,71,551,93" shape="rect">
+		<area alt="" title="OPEN CIRCLE" coords="413,73,5" shape="circle">
+	</map>
+
+	<div id="control-panel-buttons" style="display:none;">
+		<table>
+			<tr>
+				<td>Walkway Floor: </td>
+				<td>
+					<button id="walkway-on" data-t-light-id="1" data-action="on" class="button-style light-button button-on"> ON </button>
+				</td>
+				<td>
+					<button id="walkway-off" data-t-light-id="1" data-action="off" class="button-style light-button button-off button-clicked"> OFF </button>
+				</td>
+			</tr>
+			<tr>
+				<td>Cockpit Console: </td>
+				<td>
+					<button id="cockpit-on" data-t-light-id="2" data-action="on" class="button-style light-button button-on">ON</button>
+				</td>
+				<td>
+					<button s id="cockpit-off" data-t-light-id="2" data-action="off" class="button-style light-button button-off button-clicked">OFF </button>
+				</td>
+			</tr>
+			<tr>
+				<td>Gun Port: </td>
+				<td>
+					<button id="gunnery-on" data-t-light-id="3" data-action="on" class="button-style light-button button-on">ON</button>
+				</td>
+				<td>
+					<button id="gunnery-off" data-t-light-id="3" data-action="off" class="button-style light-button button-off button-clicked"> OFF </button>
+				</td>
+			</tr>
+			<tr>
+				<td>Computer Console: </td>
+				<td>
+					<button id="console-on" data-t-light-id="4" data-action="on" class="button-style light-button button-on">ON</button>
+				</td>
+				<td><button id="console-off" data-t-light-id="4" data-action="off" class="button-style light-button button-off button-clicked"> OFF </button>
+				</td>
+			</tr>
+
+			<tr>
+				<td>All: </td>
+				<td>
+					<button id="all-on" data-t-light-id="all" data-action="on" class="button-style light-button all-button button-on">ON</button>
+				</td>
+				<td><button id="all-off" data-t-light-id="all" data-action="off" class="button-style light-button all-button button-off button-clicked"> OFF </button>
+				</td>
+			</tr>
+			<tr>
+				<td>Voice Controls: </td>
+				<td>
+					<button id="voice-on" data-t-light-id="voice" data-action="on" class="button-style light-button voice-button button-on">Restart </button>
+				</td>
+				<td></td>
+			</tr>
+		</table>
+	</div>
+</body>
+</html>
